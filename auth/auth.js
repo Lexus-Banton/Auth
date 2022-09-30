@@ -1,5 +1,5 @@
 // import services and utilities
-import { getUser, signInUser, signUpUser } from '../fetch-utils.js';
+import { signInUser, signUpUser } from '../fetch-utils.js';
 
 const authHeader = document.getElementById('auth-header');
 const authForm = document.getElementById('auth-form');
