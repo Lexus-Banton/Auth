@@ -16,6 +16,4 @@ if (!user) {
 
 // > Part B: attach event listener to signOutLink that calls signOutUser
 
-signOutLink.addEventListener('click', async () => {
-    await signOutUser();
-});
+signOutLink.addEventListener('click', signOutUser);
