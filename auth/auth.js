@@ -1,5 +1,5 @@
 // import services and utilities
-import { signInUser, signUpUser } from '../fetch-utils.js';
+import { signInUser, signUpUser, getUser } from '../fetch-utils.js';
 
 const authHeader = document.getElementById('auth-header');
 const authForm = document.getElementById('auth-form');
@@ -14,7 +14,9 @@ const redirectUrl = params.get('redirectUrl') || '../';
 // > Part C: If user directly navigated to /auth, but we have a user, go back
 // (they need to sign out first before coming here)
 //      - get the user
-//      - replace location with redirectUrl
+const user = getUser();
+//      - replace location with
+if (user) location.replace(redirectUrl);
 
 // Sign up options
 const signUpType = {
